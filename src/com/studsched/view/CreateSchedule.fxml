@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" spacing="50.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.studsched.controller.CreateScheduleController">
+   <children>
+      <HBox prefHeight="32.0" prefWidth="600.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="600.0" text="Please add details for new schedule" />
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="26.0" prefWidth="150.0" text="Title:" />
+            <Pane prefHeight="0.0" prefWidth="50.0" />
+            <TextField fx:id="titleTextField" onKeyReleased="#checkFieldsFilled" prefHeight="26.0" prefWidth="260.0" />
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="26.0" prefWidth="150.0" text="Date:" />
+            <Pane prefHeight="0.0" prefWidth="50.0" />
+            <DatePicker fx:id="datePicker" onKeyReleased="#checkFieldsFilled" prefHeight="26.0" prefWidth="260.0" />
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="26.0" prefWidth="150.0" text="Time:" />
+            <Pane prefHeight="0.0" prefWidth="50.0" />
+            <Spinner fx:id="timeHourSpinner" max="12" min="0" onMouseClicked="#checkFieldsFilled" prefWidth="86.67" />
+            <Spinner fx:id="timeMinuteSpinner" max="59" min="0" onMouseClicked="#checkFieldsFilled" prefWidth="86.67" />
+            <ChoiceBox fx:id="timeAmPmChoiceBox" onInputMethodTextChanged="#checkFieldsFilled" prefWidth="86.67" />
+         </children>
+      </HBox>
+      <HBox VBox.vgrow="ALWAYS">
+         <children>
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="26.0" prefWidth="150.0" text="Note:" />
+            <Pane prefHeight="0.0" prefWidth="50.0" />
+            <TextArea fx:id="noteTextArea" onKeyReleased="#checkFieldsFilled" prefWidth="260.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <Button fx:id="createButton" mnemonicParsing="false" onAction="#createClientSchedule" text="Create" />
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#createClientSchedule" text="Cancel" />
+         </children>
+         <VBox.margin>
+            <Insets right="140.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>
