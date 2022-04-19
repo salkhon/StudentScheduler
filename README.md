@@ -1,6 +1,8 @@
 # Student Scheduler
+![logo](https://github.com/salkhon/StudentScheduler/blob/master/icon/logo.png)
 
 Simple scheduling application that manages your busy schedule.
+
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -21,6 +23,8 @@ Simple scheduling application that manages your busy schedule.
 </details>
 
 ## About The Project
+![demo](https://github.com/salkhon/StudentScheduler/blob/master/icon/demo.png)
+
 Schedules are necessary for efficient utilization of one's time. This project implements a basic scheduling application capable of doing just that, with simplicity. 
 
 You can create new schedules, assign them a particular time and add notes to remind you of the task at hand. You can also edit and delete already created schedules.
@@ -36,7 +40,7 @@ To run the application you have to have the dependencies installed and set up in
 ### Installation
 1. Clone the repo
 ```
-git clone 
+git clone git@github.com:salkhon/StudentScheduler.git
 ```
 2. Create a sqlite database file anywhere in your machine.
 3. Set up the connection string of that .db file with the scheduler. Navigate to 
